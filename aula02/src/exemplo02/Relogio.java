@@ -14,11 +14,20 @@ public class Relogio {
         this.segundo = segundo;
     }
 
+    // Overload = sobrecarga
+    public Relogio() {
+    }
+
+    public Relogio(int hora) {
+        this.hora = hora;
+    }
+
     public void setHora(int novaHora) {
         if(novaHora >= 0 && novaHora < 24) {
             this.hora = novaHora;
         }
     }
+
 
     public int getHora() {
         return hora;

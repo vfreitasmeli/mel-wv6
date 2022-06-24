@@ -3,6 +3,8 @@ package exemplo02;
 public class AppRelogio {
     public static void main(String[] args) {
         Relogio relogio  = new Relogio(56,64, 40);
+        Relogio r2 = new Relogio();
+        Relogio r3 = new Relogio(12);
 
 //        relogio.hora = 12;
 //        relogio.minuto = 64;
