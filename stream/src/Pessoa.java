@@ -1,7 +1,7 @@
-public class Pessoa {
-    String nome, pais;
-    int idade;
-    double valorGasto;
+public class Pessoa implements Comparable<Pessoa> {
+    private String nome, pais;
+    private int idade;
+    private double valorGasto;
 
     public Pessoa(String nome, String pais, int idade, double valorGasto) {
         this.nome = nome;
@@ -45,6 +45,18 @@ public class Pessoa {
     @Override
     public String toString() {
         return this.nome + ": " + idade + ": " + pais;
+    }
+
+
+    @Override
+    public int compareTo(Pessoa outraPessoa) {
+        if(this.idade < outraPessoa.getIdade()){
+            return -1;
+        }
+        if(this.idade > outraPessoa.getIdade()){
+            return 1;
+        }
+        return 0;
     }
 
 }
